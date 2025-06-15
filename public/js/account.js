@@ -320,6 +320,7 @@ const format = (a) => {
     let crIn = document.createElement("input");
     crIn.style.width = "60%";
     crIn.style.height = "20px";
+    crIn.style.margin = "0 10px";
     crIn.style.border = "none";
     crIn.style.backgroundColor = "white";
     cr1.appendChild(crIn);
@@ -381,6 +382,7 @@ const format = (a) => {
         let crIn = document.createElement("input");
         crIn.style.width = "60%";
         crIn.style.height = "20px";
+        crIn.style.margin = "0 10px";
         crIn.style.border = "none";
         crIn.style.backgroundColor = "white";
         cr1.appendChild(crIn);

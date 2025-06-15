@@ -175,3 +175,4 @@ let ledger = (acname) => {
 }
 
 
+ledger("Cash");

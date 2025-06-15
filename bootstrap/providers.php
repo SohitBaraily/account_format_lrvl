@@ -2,5 +2,6 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-    RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+    App\Providers\Filament\AdminPanelProvider::class,
+    App\Providers\Filament\CompanyPanelProvider::class,
 ];
