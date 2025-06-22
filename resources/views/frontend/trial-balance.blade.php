@@ -1,4 +1,4 @@
-<x-page-layout>
+<x-ft-page-layout>
     <section>
         <div class="hd1">
             <h2>Trial Balance of <span>ABC Company</span><br>As on <span>31st Chaitra, 2082 </span></h2>
@@ -68,4 +68,4 @@
         </div>
     </section>
 
-</x-page-layout>
+</x-ft-page-layout>

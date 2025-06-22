@@ -1,13 +1,10 @@
-<x-page-layout>
-
-
-
+<x-ft-page-layout>
     <div class="body">
         <section>
             <div class="hd1">
                 <h2>Journal Entries</h2>
             </div>
-            <form action="/save-journal-info" method="post">
+            <form action="/save-journal" method="post">
                 @csrf
                 <div class="container">
                     <div class="inbox ib1 w-[14%]">
@@ -81,9 +78,5 @@
         </div>
     </div>
     <a href=""></a>
-
-
-
-
     <script src="js/account.js"></script>
-</x-page-layout>
+</x-ft-page-layout>

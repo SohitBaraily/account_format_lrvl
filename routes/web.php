@@ -1,16 +1,17 @@
 <?php
 
+use App\Http\Controllers\Frontend\GoogleLoginController;
 use App\Http\Controllers\Frontend\PageController;
+use App\Http\Controllers\Frontend\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/journal', [PageController::class, 'journal'])->name('journal');
+Route::get('/ledger', [PageController::class, 'ledger'])->name('ledger');
+Route::get('/trial-balance', [PageController::class, 'trial_balance'])->name('trial-balance');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/subscription', [UserController::class, 'subscription'])->name('subscription');
+});
 
-Route::get('/journal', function () {
-    return view('frontend.journal');
-});
-Route::get('/ledger', function () {
-    return view('frontend.ledger');
-});
-Route::get('/trial-balance', function () {
-    return view('frontend.trial-balance');
-});
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

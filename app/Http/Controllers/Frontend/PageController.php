@@ -13,4 +13,17 @@ class PageController extends BaseController
         $compny = Company::first();
         return view('welcome');
     }
+    public function journal()
+    {
+        return view('frontend.journal');
+    }
+    public function ledger()
+    {
+        return view('frontend.ledger');
+    }
+    public function trial_balance()
+    {
+        return view('frontend.trial-balance');
+    }
+    
 }
