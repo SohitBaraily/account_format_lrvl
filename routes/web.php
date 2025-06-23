@@ -11,7 +11,10 @@ Route::get('/ledger', [PageController::class, 'ledger'])->name('ledger');
 Route::get('/trial-balance', [PageController::class, 'trial_balance'])->name('trial-balance');
 Route::middleware(['auth'])->group(function () {
     Route::get('/subscription', [UserController::class, 'subscription'])->name('subscription');
+    Route::post('/payment', [UserController::class, 'payment'])->name('payment');
+    Route::get('/khalti', [UserController::class, 'khalti']);
 });
+
 
 Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

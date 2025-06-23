@@ -78,7 +78,7 @@ class CompanyResource extends Resource
                             ->required()
                             ->maxLength(255),
                     ]),
-                Forms\Components\RichEditor::make('description')
+                Forms\Components\RichEditor::make('subscription_policies')
                     ->required()
                     ->columnSpanFull(),
             ]);
