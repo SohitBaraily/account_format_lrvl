@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Sohit extends Component
+class Header extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Sohit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.sohit');
+        return view('components.header');
     }
 }

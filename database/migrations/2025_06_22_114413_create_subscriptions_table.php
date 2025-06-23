@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('price');
+            $table->string('duration');
+            $table->longText('description');
             $table->timestamps();
         });
     }

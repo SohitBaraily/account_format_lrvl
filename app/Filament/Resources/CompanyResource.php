@@ -21,6 +21,10 @@ class CompanyResource extends Resource
     protected static ?string $model = Company::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
+    public static function canCreate(): bool
+    {
+        return Company::count() == 0 ? true : false;
+    }
 
     public static function form(Form $form): Form
     {
@@ -73,7 +77,10 @@ class CompanyResource extends Resource
                         Forms\Components\TextInput::make('link')
                             ->required()
                             ->maxLength(255),
-                    ])
+                    ]),
+                Forms\Components\RichEditor::make('description')
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 

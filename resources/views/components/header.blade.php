@@ -1,7 +1,7 @@
 <nav class="bg-black ">
     <div class="container1 h-20 w-full p-[30px]  text-white flex items-center justify-between ">
         <img class="h-full" src="{{ asset(Storage::url($company->logo)) }}" alt="">
-        <h1 class="text-[35px]">FINANCIAL FORMAT FOR COMPANIES</h1>
+        <p class="text-[35px]">FINANCIAL FORMAT FOR COMPANIES</p>
         <div >
             <div class="w-[25%] flex gap-4 justify-end items-center fixed top-1 right-4 text-red-600">
                 @if (!Auth::user())

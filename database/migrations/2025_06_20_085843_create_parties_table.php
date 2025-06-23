@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('contact');
             $table->string('address');
-            $table->enum('subscription',['standard', 'primium']);
+            $table->string('subscription');
             $table->timestamps();
         });
     }

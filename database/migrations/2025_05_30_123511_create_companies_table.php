@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('logo');
+            $table->longText('subscription_policies');
             $table->timestamps();
         });
     }
